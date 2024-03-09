@@ -1,0 +1,36 @@
+10	Barefoot	Food	Germany
+20	Tengent Solution	Health	Spain
+30	Apache Facilities	Health	Turkey
+40	Hornet Industrial	Tech	Sweden
+50	Factoryara	Health	Turkey
+60	Jumbo Manufacturing	Health	France
+70	MetaFit Industrial	Health	Sweden
+80	Grevett Industrial	Health	France
+90	Steelfire Manufacturing	Health	Germany
+100	Leubex industrial	Food	Spain
+110	Manufacturing Corner	Food	Turkey
+120	Next Pharma	Food	Turkey
+130	Bigday Industrial	Tech	Germany
+140	Factory	Food	Germany
+150	Triumph	Health	France
+160	Macho Manufacturing	Food	France
+170	FomFred	Food	Spain
+180	Manufacture Magic	Tech	Sweden
+190	Factory Path	Health	Sweden
+200	New Dimension Industries	Food	Turkey
+210	Factory Excel	Food	France
+220	Wolton industrial	Health	Spain
+230	Factorytastic	Health	Turkey
+240	Thatcher Company	Tech	Sweden
+250	Insular Industrial	Tech	Spain
+260	Strong Source	Food	Sweden
+270	Factory Victory	Health	Germany
+280	Strong Supply	Tech	France
+290	TMI Plastic Industries	Food	Turkey
+300	Factory Qualified	Health	Sweden
+310	Factory Bold	Food	France
+320	Triggers Industrial	Food	France
+330	PrimeEight	Tech	Germany
+340	MeunoMex	Food	Sweden
+350	Factory Swift	Tech	Spain
+360	Factorysio	Food	Turkey

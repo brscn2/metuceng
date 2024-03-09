@@ -1,0 +1,62 @@
+100	3 Musketeers	Food
+200	3 Musketeers Truffle Crisp	Food
+300	5 Star	Food
+400	5th Avenue	Food
+500	100 Grand Bar	Food
+600	Aero	Food
+700	Almond Joy	Food
+800	Amul Chocolate	Food
+900	Animal Bar	Food
+1000	Aztec	Food
+1100	Baby Ruth	Food
+1200	Baileys	Food
+1300	Balisto	Food
+1400	Banjo	Food
+1500	Bar None	Food
+1600	Bar One	Food
+1700	Big Turk	Food
+1800	Bertie Beetle	Food
+1900	Better Way Bar	Food
+2000	Black Thunder	Food
+2100	Boost	Food
+2200	Bounty	Food
+2300	Mars	Food
+2400	Bournville	Food
+2500	Branche	Food
+2600	Alcet	Health
+2700	Rosela	Health
+2800	Vifas	Health
+2900	Andep	Health
+3000	Angenta	Health
+3100	Esita	Health
+3200	Mirez	Health
+3300	Arthrofen	Health
+3400	Danilo	Health
+3500	Napryn	Health
+3600	Solivo	Health
+3700	Ternilla	Health
+3800	Zeropain	Health
+3900	Cafedon	Health
+4000	Cynta	Health
+4100	Syndol	Health
+4200	Bondrova	Health
+4300	Bontiv	Health
+4400	Hyalgun	Health
+4500	Synflex	Health
+4600	Mouse	Technology
+4700	MP3 player	Technology
+4800	Webcam	Technology
+4900	Hard drive	Technology
+5000	Microphone	Technology
+5100	Digital camera	Technology
+5200	Headphones	Technology
+5300	Memory stick	Technology
+5400	Floppy disc	Technology
+5500	Router	Technology
+5600	Computer	Technology
+5700	Laptop	Technology
+5800	Memory card	Technology
+5900	Printer	Technology
+6100	Fisher Price Computer	Technology
+6000	Fisher Price Watch	Technology
+6200	Arveles	Health

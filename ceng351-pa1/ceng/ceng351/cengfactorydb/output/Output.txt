@@ -1,0 +1,281 @@
+
+--------------------------------------------------------------
+*** Drop tables ***
+Dropped 6 tables.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Create tables ***
+Created 6 tables.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Factory ***
+36 factories are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Employee ***
+50 employees are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into WorksIn ***
+261 WorksIns are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Product ***
+62 products are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Produce ***
+378 produces are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Insert into Shipment ***
+248 shipments are inserted.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Find all factories that are located in a particular country ***
+Factories
+Factory{factoryId=30, factoryName='Apache Facilities', factoryType='Health', country='Turkey'}
+Factory{factoryId=50, factoryName='Factoryara', factoryType='Health', country='Turkey'}
+Factory{factoryId=110, factoryName='Manufacturing Corner', factoryType='Food', country='Turkey'}
+Factory{factoryId=120, factoryName='Next Pharma', factoryType='Food', country='Turkey'}
+Factory{factoryId=200, factoryName='New Dimension Industries', factoryType='Food', country='Turkey'}
+Factory{factoryId=230, factoryName='Factorytastic', factoryType='Health', country='Turkey'}
+Factory{factoryId=290, factoryName='TMI Plastic Industries', factoryType='Food', country='Turkey'}
+Factory{factoryId=360, factoryName='Factorysio', factoryType='Food', country='Turkey'}
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Find all factories without any working employees. ***
+Factories
+Factory{factoryId=200, factoryName='New Dimension Industries', factoryType='Food', country='Turkey'}
+Factory{factoryId=350, factoryName='Factory Swift', factoryType='Tech', country='Spain'}
+Factory{factoryId=360, factoryName='Factorysio', factoryType='Food', country='Turkey'}
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List all factories that produce all products for a particular productType ***
+Factories
+Factory{factoryId=70, factoryName='MetaFit Industrial', factoryType='Health', country='Sweden'}
+Factory{factoryId=140, factoryName='Factory', factoryType='Food', country='Germany'}
+Factory{factoryId=150, factoryName='Triumph', factoryType='Health', country='France'}
+Factory{factoryId=210, factoryName='Factory Excel', factoryType='Food', country='France'}
+Factory{factoryId=280, factoryName='Strong Supply', factoryType='Tech', country='France'}
+Factory{factoryId=300, factoryName='Factory Qualified', factoryType='Health', country='Sweden'}
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List the products that are produced in a particular factory but don’t have any shipment from that factory. ***
+Product
+Product{productId=100, productName='3 Musketeers', productType='Food'}
+Product{productId=200, productName='3 Musketeers Truffle Crisp', productType='Food'}
+Product{productId=300, productName='5 Star', productType='Food'}
+Product{productId=400, productName='5th Avenue', productType='Food'}
+Product{productId=500, productName='100 Grand Bar', productType='Food'}
+Product{productId=600, productName='Aero', productType='Food'}
+Product{productId=700, productName='Almond Joy', productType='Food'}
+Product{productId=800, productName='Amul Chocolate', productType='Food'}
+Product{productId=900, productName='Animal Bar', productType='Food'}
+Product{productId=1000, productName='Aztec', productType='Food'}
+Product{productId=1100, productName='Baby Ruth', productType='Food'}
+Product{productId=1200, productName='Baileys', productType='Food'}
+Product{productId=1300, productName='Balisto', productType='Food'}
+Product{productId=1400, productName='Banjo', productType='Food'}
+Product{productId=1500, productName='Bar None', productType='Food'}
+Product{productId=1600, productName='Bar One', productType='Food'}
+Product{productId=1700, productName='Big Turk', productType='Food'}
+Product{productId=1800, productName='Bertie Beetle', productType='Food'}
+Product{productId=1900, productName='Better Way Bar', productType='Food'}
+Product{productId=2000, productName='Black Thunder', productType='Food'}
+Product{productId=2100, productName='Boost', productType='Food'}
+Product{productId=2200, productName='Bounty', productType='Food'}
+Product{productId=2300, productName='Mars', productType='Food'}
+Product{productId=2400, productName='Bournville', productType='Food'}
+Product{productId=2500, productName='Branche', productType='Food'}
+Product{productId=2600, productName='Alcet', productType='Health'}
+Product{productId=2700, productName='Rosela', productType='Health'}
+Product{productId=2800, productName='Vifas', productType='Health'}
+Product{productId=2900, productName='Andep', productType='Health'}
+Product{productId=3000, productName='Angenta', productType='Health'}
+Product{productId=3100, productName='Esita', productType='Health'}
+Product{productId=3200, productName='Mirez', productType='Health'}
+Product{productId=3300, productName='Arthrofen', productType='Health'}
+Product{productId=3400, productName='Danilo', productType='Health'}
+Product{productId=3500, productName='Napryn', productType='Health'}
+Product{productId=3600, productName='Solivo', productType='Health'}
+Product{productId=3700, productName='Ternilla', productType='Health'}
+Product{productId=3800, productName='Zeropain', productType='Health'}
+Product{productId=3900, productName='Cafedon', productType='Health'}
+Product{productId=4000, productName='Cynta', productType='Health'}
+Product{productId=4100, productName='Syndol', productType='Health'}
+Product{productId=4200, productName='Bondrova', productType='Health'}
+Product{productId=4300, productName='Bontiv', productType='Health'}
+Product{productId=4400, productName='Hyalgun', productType='Health'}
+Product{productId=4500, productName='Synflex', productType='Health'}
+Product{productId=4600, productName='Mouse', productType='Technology'}
+Product{productId=4700, productName='MP3 player', productType='Technology'}
+Product{productId=4800, productName='Webcam', productType='Technology'}
+Product{productId=4900, productName='Hard drive', productType='Technology'}
+Product{productId=5000, productName='Microphone', productType='Technology'}
+Product{productId=5100, productName='Digital camera', productType='Technology'}
+Product{productId=5200, productName='Headphones', productType='Technology'}
+Product{productId=5300, productName='Memory stick', productType='Technology'}
+Product{productId=5400, productName='Floppy disc', productType='Technology'}
+Product{productId=5500, productName='Router', productType='Technology'}
+Product{productId=5600, productName='Computer', productType='Technology'}
+Product{productId=5700, productName='Laptop', productType='Technology'}
+Product{productId=5800, productName='Memory card', productType='Technology'}
+Product{productId=5900, productName='Printer', productType='Technology'}
+Product{productId=6100, productName='Fisher Price Computer', productType='Technology'}
+Product{productId=6200, productName='Arveles', productType='Health'}
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** For a given factoryId and department, list the average salary of the employees working in that factory and that specific department. ***
+Average
+123000.0
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List the most profitable products for each factory ***
+Most Valueable Products
+MostValueableProduct{factoryId=140, productId=2300, productName='Mars', productType='Food', profit=757271.0}
+MostValueableProduct{factoryId=280, productId=2600, productName='Alcet', productType='Health', profit=532970.0}
+MostValueableProduct{factoryId=150, productId=100, productName='3 Musketeers', productType='Food', profit=505047.0}
+MostValueableProduct{factoryId=300, productId=1600, productName='Bar One', productType='Food', profit=429765.0}
+MostValueableProduct{factoryId=210, productId=500, productName='100 Grand Bar', productType='Food', profit=321284.0}
+MostValueableProduct{factoryId=50, productId=3600, productName='Solivo', productType='Health', profit=292066.0}
+MostValueableProduct{factoryId=160, productId=2400, productName='Bournville', productType='Food', profit=190658.0}
+MostValueableProduct{factoryId=250, productId=5200, productName='Headphones', productType='Technology', profit=1082.0}
+MostValueableProduct{factoryId=70, productId=5400, productName='Floppy disc', productType='Technology', profit=678.0}
+MostValueableProduct{factoryId=100, productId=4300, productName='Bontiv', productType='Health', profit=-34361.0}
+MostValueableProduct{factoryId=330, productId=4100, productName='Syndol', productType='Health', profit=-66250.0}
+MostValueableProduct{factoryId=10, productId=2300, productName='Mars', productType='Food', profit=-173075.0}
+MostValueableProduct{factoryId=40, productId=5800, productName='Memory card', productType='Technology', profit=-199761.0}
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** List the most profit gaining factories for each product ***
+Most Earning Factories for Product
+MostValueableProduct{factoryId=140, productId=2300, productName='Mars', productType='Food', profit=757271.0}
+MostValueableProduct{factoryId=140, productId=4400, productName='Hyalgun', productType='Health', profit=613412.0}
+MostValueableProduct{factoryId=140, productId=2000, productName='Black Thunder', productType='Food', profit=601191.0}
+MostValueableProduct{factoryId=140, productId=1900, productName='Better Way Bar', productType='Food', profit=541292.0}
+MostValueableProduct{factoryId=280, productId=2600, productName='Alcet', productType='Health', profit=532970.0}
+MostValueableProduct{factoryId=150, productId=100, productName='3 Musketeers', productType='Food', profit=505047.0}
+MostValueableProduct{factoryId=280, productId=700, productName='Almond Joy', productType='Food', profit=484713.0}
+MostValueableProduct{factoryId=140, productId=5700, productName='Laptop', productType='Technology', profit=469578.0}
+MostValueableProduct{factoryId=280, productId=1700, productName='Big Turk', productType='Food', profit=457450.0}
+MostValueableProduct{factoryId=280, productId=200, productName='3 Musketeers Truffle Crisp', productType='Food', profit=431715.0}
+MostValueableProduct{factoryId=300, productId=1600, productName='Bar One', productType='Food', profit=429765.0}
+MostValueableProduct{factoryId=150, productId=900, productName='Animal Bar', productType='Food', profit=371209.0}
+MostValueableProduct{factoryId=280, productId=5600, productName='Computer', productType='Technology', profit=364095.0}
+MostValueableProduct{factoryId=280, productId=400, productName='5th Avenue', productType='Food', profit=357493.0}
+MostValueableProduct{factoryId=140, productId=3100, productName='Esita', productType='Health', profit=332320.0}
+MostValueableProduct{factoryId=280, productId=1500, productName='Bar None', productType='Food', profit=331952.0}
+MostValueableProduct{factoryId=210, productId=500, productName='100 Grand Bar', productType='Food', profit=321284.0}
+MostValueableProduct{factoryId=140, productId=4700, productName='MP3 player', productType='Technology', profit=316610.0}
+MostValueableProduct{factoryId=300, productId=2500, productName='Branche', productType='Food', profit=314506.0}
+MostValueableProduct{factoryId=210, productId=3200, productName='Mirez', productType='Health', profit=313258.0}
+MostValueableProduct{factoryId=280, productId=2400, productName='Bournville', productType='Food', profit=312984.0}
+MostValueableProduct{factoryId=280, productId=3300, productName='Arthrofen', productType='Health', profit=311352.0}
+MostValueableProduct{factoryId=50, productId=3600, productName='Solivo', productType='Health', profit=292066.0}
+MostValueableProduct{factoryId=140, productId=5800, productName='Memory card', productType='Technology', profit=281180.0}
+MostValueableProduct{factoryId=280, productId=5100, productName='Digital camera', productType='Technology', profit=279434.0}
+MostValueableProduct{factoryId=140, productId=3700, productName='Ternilla', productType='Health', profit=268674.0}
+MostValueableProduct{factoryId=280, productId=4900, productName='Hard drive', productType='Technology', profit=266600.0}
+MostValueableProduct{factoryId=140, productId=4600, productName='Mouse', productType='Technology', profit=260281.0}
+MostValueableProduct{factoryId=140, productId=2200, productName='Bounty', productType='Food', profit=259252.0}
+MostValueableProduct{factoryId=280, productId=1100, productName='Baby Ruth', productType='Food', profit=253442.0}
+MostValueableProduct{factoryId=280, productId=2700, productName='Rosela', productType='Health', profit=246717.0}
+MostValueableProduct{factoryId=140, productId=5000, productName='Microphone', productType='Technology', profit=243184.0}
+MostValueableProduct{factoryId=140, productId=3800, productName='Zeropain', productType='Health', profit=242723.0}
+MostValueableProduct{factoryId=150, productId=1000, productName='Aztec', productType='Food', profit=239575.0}
+MostValueableProduct{factoryId=140, productId=300, productName='5 Star', productType='Food', profit=234072.0}
+MostValueableProduct{factoryId=150, productId=800, productName='Amul Chocolate', productType='Food', profit=210278.0}
+MostValueableProduct{factoryId=280, productId=5900, productName='Printer', productType='Technology', profit=201076.0}
+MostValueableProduct{factoryId=140, productId=3400, productName='Danilo', productType='Health', profit=194736.0}
+MostValueableProduct{factoryId=280, productId=1400, productName='Banjo', productType='Food', profit=190300.0}
+MostValueableProduct{factoryId=140, productId=600, productName='Aero', productType='Food', profit=188888.0}
+MostValueableProduct{factoryId=140, productId=4800, productName='Webcam', productType='Technology', profit=179284.0}
+MostValueableProduct{factoryId=280, productId=2900, productName='Andep', productType='Health', profit=171389.0}
+MostValueableProduct{factoryId=140, productId=3900, productName='Cafedon', productType='Health', profit=167779.0}
+MostValueableProduct{factoryId=280, productId=5500, productName='Router', productType='Technology', profit=164016.0}
+MostValueableProduct{factoryId=140, productId=4200, productName='Bondrova', productType='Health', profit=147580.0}
+MostValueableProduct{factoryId=150, productId=1200, productName='Baileys', productType='Food', profit=143059.0}
+MostValueableProduct{factoryId=280, productId=5300, productName='Memory stick', productType='Technology', profit=134946.0}
+MostValueableProduct{factoryId=140, productId=1300, productName='Balisto', productType='Food', profit=112445.0}
+MostValueableProduct{factoryId=140, productId=3500, productName='Napryn', productType='Health', profit=110445.0}
+MostValueableProduct{factoryId=280, productId=4100, productName='Syndol', productType='Health', profit=98795.0}
+MostValueableProduct{factoryId=280, productId=2100, productName='Boost', productType='Food', profit=79673.0}
+MostValueableProduct{factoryId=280, productId=4000, productName='Cynta', productType='Health', profit=69333.0}
+MostValueableProduct{factoryId=140, productId=4300, productName='Bontiv', productType='Health', profit=68771.0}
+MostValueableProduct{factoryId=280, productId=1800, productName='Bertie Beetle', productType='Food', profit=66423.0}
+MostValueableProduct{factoryId=140, productId=4500, productName='Synflex', productType='Health', profit=61030.0}
+MostValueableProduct{factoryId=140, productId=3000, productName='Angenta', productType='Health', profit=47563.0}
+MostValueableProduct{factoryId=210, productId=2800, productName='Vifas', productType='Health', profit=38030.0}
+MostValueableProduct{factoryId=210, productId=5200, productName='Headphones', productType='Technology', profit=29903.0}
+MostValueableProduct{factoryId=70, productId=5400, productName='Floppy disc', productType='Technology', profit=678.0}
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+***  For each department, list all employees that are paid under the average salary for that department. ***
+Low Salary Employees
+LowSalaryEmployees{employeeId=10, employeeName='Carl Wise', department='Sales', salary=101000}
+LowSalaryEmployees{employeeId=30, employeeName='Jessica Clayton', department='HR', salary=42000}
+LowSalaryEmployees{employeeId=50, employeeName='Debbie Jefferson', department='Sales', salary=113000}
+LowSalaryEmployees{employeeId=60, employeeName='Desiree Carroll', department='HR', salary=148000}
+LowSalaryEmployees{employeeId=110, employeeName='Natalie Cobb', department='HR', salary=121000}
+LowSalaryEmployees{employeeId=120, employeeName='Martha Frazier', department='HR', salary=139000}
+LowSalaryEmployees{employeeId=130, employeeName='Anthony Zimmerman', department='ProductionLine', salary=61000}
+LowSalaryEmployees{employeeId=170, employeeName='Opal Jacobs', department='IT', salary=79000}
+LowSalaryEmployees{employeeId=200, employeeName='Tomas Rodriguez', department='IT', salary=166000}
+LowSalaryEmployees{employeeId=210, employeeName='Terrell Page', department='IT', salary=96000}
+LowSalaryEmployees{employeeId=220, employeeName='Juanita Spencer', department='IT', salary=49000}
+LowSalaryEmployees{employeeId=230, employeeName='Adrian George', department='HR', salary=33000}
+LowSalaryEmployees{employeeId=240, employeeName='Ora Barber', department='Sales', salary=124000}
+LowSalaryEmployees{employeeId=260, employeeName='Arnold Reid', department='IT', salary=155000}
+LowSalaryEmployees{employeeId=280, employeeName='Gerald Jordan', department='HR', salary=72000}
+LowSalaryEmployees{employeeId=350, employeeName='Blake Luna', department='ProductionLine', salary=104000}
+LowSalaryEmployees{employeeId=390, employeeName='Leona Pratt', department='IT', salary=37000}
+LowSalaryEmployees{employeeId=400, employeeName='Geneva Rogers', department='IT', salary=135000}
+LowSalaryEmployees{employeeId=440, employeeName='Charlotte Moore', department='IT', salary=179000}
+LowSalaryEmployees{employeeId=450, employeeName='Cary Holmes', department='IT', salary=51000}
+LowSalaryEmployees{employeeId=460, employeeName='Bert Castillo', department='Sales', salary=133000}
+LowSalaryEmployees{employeeId=480, employeeName='Marcia Barnett', department='ProductionLine', salary=98000}
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** For the products of given productType, increase the productionCost of every unit by a given percentage. ***
+78 rows are changed.
+
+--------------------------------------------------------------
+
+--------------------------------------------------------------
+*** Delete all employees that have not worked since the given date. ***
+20 rows are changed.
+
+--------------------------------------------------------------
