@@ -1,0 +1,110 @@
+#include "the5.h"
+
+// do not add extra libraries here
+
+enum colors
+{
+    WHITE,
+    GRAY,
+    BLACK
+};
+
+// int time = 0;
+
+typedef struct
+{
+    int vertex;
+    colors color; /* white: 0, gray: 1 or black: 2 */
+    int parent;
+    // int discovery;
+    // int finish;
+} Vertex;
+
+void dfs_visit(const std::vector<std::vector<int>> &dependencyMatrix, std::vector<Vertex *> *vertices, Vertex *u, bool &isCompilable, std::vector<int> &compileOrder, std::vector<int> *cyclicDependency, std::vector<std::vector<int>> &cyclicDependencies)
+{
+    // time++;
+    // u->discovery = time;
+    u->color = GRAY;
+    bool isSelfAdded = false;
+    //std::cout << "Visiting: " << u->vertex << "\n";
+    for (int j = dependencyMatrix.at(0).size() - 1; j >= 0; j--)
+    {
+        if (dependencyMatrix.at(u->vertex).at(j) == 1)
+        {
+            if (vertices->at(j)->color == GRAY)
+            {
+                //std::cout << "Gray: " << j << "\n";
+                isCompilable = false;
+                if (!isSelfAdded) {
+                    cyclicDependency->push_back(u->vertex);
+                    isSelfAdded = true;
+                }
+                cyclicDependency->push_back(j);
+            }
+            else if (vertices->at(j)->color == WHITE)
+            {
+                //std::cout << "White: " << j << "\n";
+                vertices->at(j)->parent = u->vertex;
+
+                std::vector<int> *cyclicDependencyChild = new std::vector<int>();
+                dfs_visit(dependencyMatrix, vertices, vertices->at(j), isCompilable, compileOrder, cyclicDependencyChild, cyclicDependencies);
+
+                bool doesSelfExist = false;
+                for (int k = 0; k < cyclicDependencyChild->size(); k++)
+                {
+                    if (cyclicDependencyChild->at(k) == u->vertex)
+                        doesSelfExist = true;
+                }
+
+                if (doesSelfExist)
+                    cyclicDependencies.push_back(*cyclicDependencyChild);
+                else
+                {
+                    if (cyclicDependency->size() != 0) {
+                        cyclicDependency->insert(cyclicDependency->end(), cyclicDependencyChild->begin(), cyclicDependencyChild->end());
+                        //cyclicDependency->push_back(u->vertex);
+                    }
+                    else
+                    {
+                        *cyclicDependency = *cyclicDependencyChild;
+                        cyclicDependency->push_back(u->vertex);
+                    }
+                }
+            }
+        }
+    }
+    u->color = BLACK;
+    // time++;
+    if (isCompilable)
+        compileOrder.insert(compileOrder.begin(), u->vertex);
+    // u->finish = time;
+}
+
+void dfs(const std::vector<std::vector<int>> &dependencyMatrix, std::vector<Vertex *> *vertices, bool &isCompilable, std::vector<int> &compileOrder, std::vector<std::vector<int>> &cyclicDependencies)
+{
+    isCompilable = true;
+    for (int i = vertices->size() - 1; i >= 0; i--)
+    {
+        std::vector<int> *cyclicDependency = new std::vector<int>();
+        if (vertices->at(i)->color == WHITE)
+            dfs_visit(dependencyMatrix, vertices, vertices->at(i), isCompilable, compileOrder, cyclicDependency, cyclicDependencies);
+    }
+}
+
+void run(const std::vector<std::vector<int>> &dependencyMatrix,
+         bool &isCompilable,
+         std::vector<int> &compileOrder,
+         std::vector<std::vector<int>> &cyclicDependencies)
+{
+    std::vector<Vertex *> *vertices = new std::vector<Vertex *>();
+
+    for (int i = 0; i < dependencyMatrix.size(); i++)
+    {
+        Vertex *v = new Vertex;
+        v->vertex = i;
+        v->color = WHITE;
+        v->parent = -1;
+        vertices->push_back(v);
+    }
+    dfs(dependencyMatrix, vertices, isCompilable, compileOrder, cyclicDependencies);
+}

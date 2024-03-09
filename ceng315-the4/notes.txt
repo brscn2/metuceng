@@ -1,0 +1,28 @@
+divide land into rectangular plots
+leave least m^2 of unusable land
+
+divide either horizontally or vertically (with integer dimensions)
+divides completely through the land
+
+divided plots cannot be joined together
+
+dimensions of plots cannot be rotated
+
+for each given dimension, you can create one or more plots
+
+unusable if a piece of land is not of any given dimension after all dividing complete
+
+input: 
+    X and Y (dimensions of the land)
+    bool [][] (dimensions of the plots)
+        example: bool[2][3] == true, there can be a 2x3 plot
+
+output:
+    return m^2 of unusable land
+
+int divide_land(int X, int Y, bool **possible_plots);
+
+constraints: 
+X and Y are integers <= 600
+possible_plots is maximum 201x201
+use dynamic programming approach

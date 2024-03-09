@@ -1,0 +1,11 @@
+sort the array in DESCENDING order
+count the number of swaps executed
+
+calculate average distance between swap positions as "avg_dist"
+find the max distance between swap positions as "max_dist"
+both = 0, if no swap
+
+the quickSort() function returns the number of recursive calls
+
+if indexes are the same, nothing to handle. apply swap and increment variables accordingly
+

@@ -1,0 +1,222 @@
+#include <string>
+#include <vector>
+#include <iostream>
+#include <climits>
+// do not add extra libraries, but you can define helper functions below.
+
+int findMax(int a, int b, int c)
+{
+    if (a >= b && a >= c)
+        return a;
+    else if (b >= a && b >= c)
+        return b;
+    else
+        return c;
+}
+
+int calculateComparison(char i, char j, int mismatch, int match)
+{
+    if (i == j)
+    {
+        return match;
+    }
+    else
+        return -mismatch;
+}
+
+int F(std::string sequence_A, std::string sequence_B, int i, int j, int gap, int mismatch, int match, std::string &possible_alignment, int *call_count)
+{
+    (*call_count)++;
+
+    // std::cout << "Call:" << *call_count << "\n";
+
+    if (*call_count >= 1000000)
+    {
+        possible_alignment = "STACK LIMIT REACHED";
+        return INT_MIN;
+    }
+
+    if (i == sequence_A.length() && j != sequence_B.length())
+    {
+        for (int k = 0; k < sequence_B.length() - j; k++)
+        {
+            possible_alignment.insert(0, 1, '.');
+        }
+
+        return (-gap) * (sequence_B.length() - j);
+    }
+    else if (i != sequence_A.length() && j == sequence_B.length())
+    {
+        for (int k = 0; k < sequence_A.length() - i; k++)
+        {
+            possible_alignment.insert(0, 1, '_');
+        }
+
+        return (-gap) * (sequence_A.length() - i);
+    }
+    else if (i == sequence_A.length() && j == sequence_B.length())
+        return 0;
+
+    int highest_alignment_score;
+
+    std::string posalign_1;
+    posalign_1.assign(possible_alignment);
+    int posOne = F(sequence_A, sequence_B, i + 1, j + 1, gap, mismatch, match, posalign_1, call_count);
+    if (posOne == INT_MIN)
+    {
+        possible_alignment = "STACK LIMIT REACHED";
+        return INT_MIN;
+    }
+    int comparisonResult = calculateComparison(sequence_A.at(i), sequence_B.at(j), mismatch, match);
+    posOne += comparisonResult;
+
+    std::string posalign_2;
+    posalign_2.assign(possible_alignment);
+    int posTwo = F(sequence_A, sequence_B, i + 1, j, gap, mismatch, match, posalign_2, call_count);
+    if (posTwo == INT_MIN)
+    {
+        possible_alignment = "STACK LIMIT REACHED";
+        return INT_MIN;
+    }
+    posTwo -= gap;
+
+    std::string posalign_3;
+    posalign_3.assign(possible_alignment);
+    int posThree = F(sequence_A, sequence_B, i, j + 1, gap, mismatch, match, posalign_3, call_count);
+    if (posThree == INT_MIN)
+    {
+        possible_alignment = "STACK LIMIT REACHED";
+        return INT_MIN;
+    }
+    posThree -= gap;
+
+    highest_alignment_score = findMax(posOne, posTwo, posThree);
+    if (highest_alignment_score == posOne)
+        if (comparisonResult < 0)
+        {
+            possible_alignment = posalign_1.insert(0, 1, '!');
+        }
+        else
+            possible_alignment = posalign_1.insert(0, 1, sequence_A[i]);
+    else if (highest_alignment_score == posTwo)
+        possible_alignment = posalign_2.insert(0, 1, '.');
+    else
+        possible_alignment = posalign_3.insert(0, 1, '_');
+
+    return highest_alignment_score;
+}
+
+/*
+PART 1
+you are expected to call recursive_alignment (as the name suggests) recursively to find an alignment.
+initial call_count value given to you will be 0.
+you should check if call_count >= 1000000, if so, set possible_alignment string to "STACK LIMIT REACHED", return INT_MIN (or anything - it will not be checked).
+*/
+int recursive_alignment(std::string sequence_A, std::string sequence_B, int gap, int mismatch, int match, std::string &possible_alignment, int call_count)
+{
+    int highest_alignment_score;
+
+    /* May need to change where I increment the call count. Does it initialize to 1 or zero before the first call?*/
+
+    highest_alignment_score = F(sequence_A, sequence_B, 0, 0, gap, mismatch, match, possible_alignment, &call_count);
+
+    return highest_alignment_score;
+}
+
+/*
+PART 2
+you are expected to create a dynamic programming table to find the highest alignment score.
+then you will need to reconstruct a possible alignment string from the table.
+*/
+int dp_table_alignment(std::string sequence_A, std::string sequence_B, int gap, int mismatch, int match, std::string &possible_alignment)
+{
+    int highest_alignment_score;
+    int rowCount = sequence_A.length();
+    int colCount = sequence_B.length();
+    std::vector<std::vector<int>> dpTable(rowCount + 1, std::vector<int>(colCount + 1));
+    std::vector<std::vector<int>> recTable(rowCount, std::vector<int>(colCount));
+
+    // initialize base cases
+    for (int i = 0; i < rowCount + 1; i++)
+    {
+        dpTable[i][0] = 0;
+    }
+    for (int j = 0; j < colCount + 1; j++)
+    {
+        dpTable[0][j] = 0;
+    }
+
+    for (int i = 1; i < rowCount + 1; i++)
+    {
+        for (int j = 1; j < colCount + 1; j++)
+        {
+            int posOne = dpTable[i - 1][j - 1] + calculateComparison(sequence_A[i - 1], sequence_B[j - 1], mismatch, match);
+            int posTwo = dpTable[i - 1][j] - gap;
+            int posThree = dpTable[i][j - 1] - gap;
+            dpTable[i][j] = findMax(posOne, posTwo, posThree);
+            if (dpTable[i][j] == posOne)
+                recTable[i - 1][j - 1] = 1;
+            else if (dpTable[i][j] == posTwo)
+                recTable[i - 1][j - 1] = 2;
+            else
+                recTable[i - 1][j - 1] = 3;
+        }
+    }
+
+    int i = rowCount - 1, j = colCount - 1;
+    while (i != -1 && j != -1)
+    {
+        if (recTable[i][j] == 1)
+        {
+            if (sequence_A[i] == sequence_B[j])
+                possible_alignment.insert(0, 1, sequence_A[i]);
+            else
+                possible_alignment.insert(0, 1, '!');
+            i--;
+            j--;
+        }
+        else if (recTable[i][j] == 2)
+        {
+            possible_alignment.insert(0, 1, '.');
+            i--;
+        }
+        else
+        {
+            possible_alignment.insert(0, 1, '_');
+            j--;
+        }
+    }
+
+    if (i != -1)
+    {
+        while (i-- != -1)
+        {
+            possible_alignment.insert(0, 1, '.');
+            dpTable[rowCount][colCount] -= gap;
+        }
+    }
+
+    if (j != -1)
+    {
+        while (j-- != -1)
+        {
+            possible_alignment.insert(0, 1, '_');
+            dpTable[rowCount][colCount] -= gap;
+        }
+    }
+
+    highest_alignment_score = dpTable[rowCount][colCount];
+    return highest_alignment_score;
+}
+
+int main()
+{
+    std::string sequence_A = "GATTACA";
+    std::string sequence_B = "GTCGACGCA";
+    int gap = 2;
+    int mismatch = 1;
+    int match = 1;
+    std::string possible_alignment = "";
+    int result = dp_table_alignment(sequence_A, sequence_B, gap, mismatch, match, possible_alignment);
+    std::cout << "Score: " << result << " Alignment: " << possible_alignment << "\n";
+}
