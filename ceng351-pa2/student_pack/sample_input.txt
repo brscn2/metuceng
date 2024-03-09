@@ -1,0 +1,60 @@
+1|Bringing Down the House|Ben Mezrich|Non-fiction
+2|Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch|Terry Pratchett|Fantasy
+3|Embrace Your Weird|Felicia Day|Non-fiction
+4|Write Useful Books|Rob Fitzpatrick|Non-fiction
+5|The Amateur's Mind|Jeremy Silman|Non-fiction
+6|Hacking: The Art of Exploitation w/CD|Jon Erickson|Non-fiction
+7|The Paper Menagerie and Other Stories|Ken Liu|Short Stories
+8|The Box|Marc Levinson|Non-fiction
+9|All These Worlds|Dennis E. Taylor|Science Fiction
+10|For We Are Many|Dennis E. Taylor|Science Fiction
+11|Heaven's River|Dennis E. Taylor|Science Fiction
+12|We Are Legion|Dennis E. Taylor|Science Fiction
+13|The Temple of the Golden Pavilion|Yukio Mishima|Classics
+14|Stuff They Don't Want You to Know|Ben Bowlin|History
+15|Grunt: The Curious Science of Humans at War|Mary Roach|History
+16|How to Take Over the World|Ryan North|Non-fiction
+17|I Could Tell You But Then You Would Have to be Destroyed by Me|Trevor Paglen|Non-fiction
+18|The Cloisters|Katy Hays|Mystery
+19|Hell Bent|Leigh Bardugo|Fantasy
+20|We|Yevgeny Zamyatin|Science Fiction
+21|Piranesi|Susanna Clarke|Fantasy
+22|Educated|Tara Westover|Memoir
+23|The Name of the Wind|Patrick Rothfuss|Fantasy
+24|Dial A for Aunties|Jesse Q. Sutanto|Romance
+25|Fugitive Telemetry|Martha Wells|Science Fiction
+26|Network Effect|Martha Wells|Science Fiction
+27|Home: Habitat, Range, Niche, Territory|Martha Wells|Science Fiction
+28|Exit Strategy|Martha Wells|Science Fiction
+29|Rogue Protocol|Martha Wells|Science Fiction
+30|Hollow Kingdom|Kira Jane Buxton|Fantasy
+31|Digital Minimalism|Cal Newport|Non-fiction
+32|Artificial Condition|Martha Wells|Science Fiction
+33|House of Earth and Blood|Sarah J. Maas|Fantasy
+34|Why Fish Don't Exist|Lulu Miller|Non-fiction
+35|Naming Nature|Carol Kaesuk Yoon|Non-fiction
+36|The Thought Gang|Tibor Fischer|Humor
+37|Godard Makinesi|Merve Yakut|Fiction
+38|The Calculating Stars|Mary Robinette Kowal|Science Fiction
+39|How to Take Smart Notes|Sönke Ahrens|Non-fiction
+40|The Mathematics of Love|Hannah Fry|Non-fiction
+41|All Systems Red|Martha Wells|Science Fiction
+42|The Last Wish|Andrzej Sapkowski|Fantasy
+43|Zamanın En Kısa Hali|Cem Akaş|Fiction
+44|Dark Age|Pierce Brown|Fantasy
+45|Heart of a Dog|Mikhail Bulgakov|Classics
+46|Iron Gold|Pierce Brown|Fantasy
+47|Dirk Gently's Holistic Detective Agency|Douglas Adams|Science Fiction
+48|Morning Star|Pierce Brown|Science Fiction
+49|Golden Son|Pierce Brown|Science Fiction
+50|Red Rising|Pierce Brown|Science Fiction
+51|Lost in a Good Game|Pete Etchells|Non-fiction
+52|Axiom's End|Lindsay  Ellis|Science Fiction
+53|The Machine That Changed the World|James P. Womack|Non-fiction
+54|The Mouse That Roared|Leonard Wibberley|Humor
+55|Fashionopolis|Dana Thomas|Non-fiction
+56|Pascalian Meditations|Pierre Bourdieu|Philosopy
+57|Anxious People|Fredrik Backman|Contemporary
+58|The Humans|Matt Haig|Science Fiction
+59|The Midnight Library|Matt Haig|Contemporary
+60|Watchmen|Alan Moore|Graphic Novel

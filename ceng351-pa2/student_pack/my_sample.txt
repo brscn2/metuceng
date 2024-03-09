@@ -1,0 +1,5 @@
+add|1|Bringing Down the House|Ben Mezrich|Non-fiction
+add|2|Good Omens: The Nice and Accurate Prophecies of Agnes Nutter, Witch|Terry Pratchett|Fantasy
+add|3|Embrace Your Weird|Felicia Day|Non-fiction
+add|4|Write Useful Books|Rob Fitzpatrick|Non-fiction
+add|5|The Amateur's Mind|Jeremy Silman|Non-fiction
