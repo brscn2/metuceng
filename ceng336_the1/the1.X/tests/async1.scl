@@ -1,0 +1,14 @@
+testbench for "pic18f8722" is
+   begin
+      process is
+         begin
+            RE0 <= '1';
+            wait for 10 ms;
+            RE0 <= '0';
+            wait for 550 ms;
+            RE1 <= '1';
+            wait for 10 ms;
+            RE1 <= '0';
+            wait;
+         end process;
+   end testbench;
